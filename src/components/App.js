@@ -6,7 +6,7 @@ import { NotFound } from './NotFound';
 import CharacterDetail from './CharacterDetail';
 import Home from './Home';
 import List from './List';
-
+import '../styles/reset.css';
 
 export default function App() {
   const perPage = 10;
