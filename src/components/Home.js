@@ -7,15 +7,20 @@ export default class Home extends Component  {
     randomImgUrl: '',
   }
 
-  componentDidMount() {
+  apiGetRandomCharacter = () => {
     getCharacters({ getARandomOne: true })
       .then(([{ photoUrl }]) => this.setState({ randomImgUrl: photoUrl }));
   }
+
+  componentDidMount() {
+    this.apiGetRandomCharacter();
+  }  
 
   render() {
     return (
       <>
         <img src={this.state.randomImgUrl} />
+        <button onClick={this.apiGetRandomCharacter}>See Another</button>
       </>
     );
   }
