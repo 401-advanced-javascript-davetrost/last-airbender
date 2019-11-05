@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character Detail component renders character details 1`] = `
+<div>
+  <h1>
+    nodejs
+  </h1>
+  <img
+    alt="image of nodejs"
+    src=""
+  />
+  <dl>
+    <dd>
+      Allies: 
+    </dd>
+    <dd>
+      Enemies: 
+    </dd>
+    <dd>
+      Affiliation: 
+      unknown
+    </dd>
+  </dl>
+  <button
+    onClick={[Function]}
+  >
+    Close
+  </button>
+</div>
+`;

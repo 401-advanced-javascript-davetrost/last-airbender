@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getCharacters } from '../services/getCharacters';
 
@@ -29,8 +28,6 @@ export default class CharacterDetail extends React.Component {
 
   render() {
     const { photoUrl, gender, hair, position, allies, enemies, affiliation } = this.state;
-    const { history } = this.props;
-    console.log(history);
     
     return (
       <div>
@@ -45,7 +42,6 @@ export default class CharacterDetail extends React.Component {
           <dd>Affiliation: {affiliation || 'unknown'}</dd>
         </dl>
         <button onClick={this.handleClose}>Close</button>
-        <button><Link to="/list">Return to Results</Link></button>
       </div>
     );
   }
