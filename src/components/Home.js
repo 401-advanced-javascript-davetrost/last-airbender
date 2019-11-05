@@ -7,7 +7,7 @@ export default class Home extends Component  {
   state = {
     randomImgUrl: '',
     randomImgName: '',
-    search: '',
+    search: ''
   }
 
   apiGetRandomCharacter = () => {
