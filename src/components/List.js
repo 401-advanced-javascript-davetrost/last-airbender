@@ -7,23 +7,27 @@ export default class List extends Component  {
 
   state = {
     items: [],
+    search: this.props.match.params.search || '*',
+    page: this.props.match.params.page || 1,
   }
 
   apiGetCharacterList = () => {
-    const { search, page } = this.props.match.params;
-    console.log('page', page);
-    console.log('search', search);
-    
-    getCharacters({ search, page })
+    const { search, page } = this.state;
+    const { perPage } = this.props;
+    getCharacters({ search, page, perPage })
       .then(items => this.setState({ items }));
   }
   
   handlePageChange = increment => {
-    const { search, page } = this.props.match.params;
-    const newPage = Math.max(1, +(page || 1) + increment);
-    this.props.history.push(`/list/${search}/${newPage}`);
+    const { search, page, items } = this.state;
+    const { perPage, history } = this.props;
+    if(items.length >= perPage) {
+      const newPage = Math.max(1, +page + increment);
+      this.setState({ page: newPage });
+      history.push(`/list/${search}/${newPage}`);
+    }
   }
-
+  
   componentDidMount = () => {
     this.apiGetCharacterList();
   }
@@ -44,7 +48,7 @@ export default class List extends Component  {
         key={item._id || item.name}
         name={item.name}
         image={item.photoUrl}
-        handleClick={() => this.handleCharacterSelect(item)} />
+        handleCharacterSelect={() => this.handleCharacterSelect(item)} />
     ));
   
     return (
@@ -61,11 +65,12 @@ export default class List extends Component  {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
-        search: PropTypes.string.isRequired,
+        search: PropTypes.string,
         page: PropTypes.string
       }).isRequired
     }).isRequired,
-    history: PropTypes.object.isRequired
+    history: PropTypes.object.isRequired,
+    perPage: PropTypes.number.isRequired
   }
 
 }
