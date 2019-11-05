@@ -7,10 +7,11 @@ import CharacterDetail from './CharacterDetail';
 import Home from './Home';
 import List from './List';
 
-const perPage = 10;
-const listComp = (props) => <List {...props} perPage={perPage} />;
 
 export default function App() {
+  const perPage = 10;
+  const listComp = (props) => <List {...props} perPage={perPage} />;
+
   return (
     <Router>
       <Header />

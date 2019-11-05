@@ -5,7 +5,10 @@ export const Header = () => (
   <div>
     <h1>Avatar Browser</h1>
     <nav>
-      <Link to="/">Home</Link>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/list">All Avatars</Link></li>
+      </ul>
     </nav>
   </div>
 );
