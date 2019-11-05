@@ -6,14 +6,18 @@ import { NotFound } from './NotFound';
 import Home from './Home';
 import List from './List';
 
+const perPage = 10;
+const listComp = (props) => <List {...props} perPage={perPage} />;
+
 export default function App() {
   return (
     <Router>
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/list/:search/:page" component={List} />
-        <Route path="/list/:search/" component={List} />
+        <Route path="/list/:search/:page" render={listComp} />
+        <Route path="/list/:search/" render={listComp} />
+        {/* <Route path="/list/" render={listComp} /> */}
         <Route path="/" component={NotFound} />
       </Switch>
       <Footer />
