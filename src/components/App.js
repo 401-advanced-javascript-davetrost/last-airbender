@@ -17,7 +17,7 @@ export default function App() {
         <Route exact path="/" component={Home} />
         <Route path="/list/:search/:page" render={listComp} />
         <Route path="/list/:search/" render={listComp} />
-        {/* <Route path="/list/" render={listComp} /> */}
+        <Route path="/list/" render={listComp} />
         <Route path="/" component={NotFound} />
       </Switch>
       <Footer />
