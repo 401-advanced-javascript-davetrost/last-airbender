@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { NotFound } from './NotFound';
+import CharacterDetail from './CharacterDetail';
 import Home from './Home';
 import List from './List';
 
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/list/:search/:page" render={listComp} />
         <Route path="/list/:search/" render={listComp} />
         <Route path="/list/" render={listComp} />
+        <Route path="/detail/:id" component={CharacterDetail} />
         <Route path="/" component={NotFound} />
       </Switch>
       <Footer />

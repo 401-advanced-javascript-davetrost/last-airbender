@@ -6,6 +6,9 @@ export const getCharacters = (options) => {
   if(options.getARandomOne) {
     url += '/random';
   }
+  else if(options.id) {
+    url += `/${options.id}`;
+  }
   else if(options.search && options.search === '*') {
     url += `?perPage=${options.perPage || 10}&page=${options.page || 1}`;
   }

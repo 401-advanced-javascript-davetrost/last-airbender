@@ -38,8 +38,9 @@ export default class List extends Component  {
     if(prevPage != page) this.apiGetCharacterList();
   }
 
-  handleCharacterSelect = item => {
-    console.log(item);
+  handleCharacterSelect = id => {
+    const { history } = this.props;
+    history.push(`/detail/${id}`);
   }
 
   render() {
@@ -48,7 +49,7 @@ export default class List extends Component  {
         key={item._id || item.name}
         name={item.name}
         image={item.photoUrl}
-        handleCharacterSelect={() => this.handleCharacterSelect(item)} />
+        handleCharacterSelect={() => this.handleCharacterSelect(item._id)} />
     ));
   
     return (
