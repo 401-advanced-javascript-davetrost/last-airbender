@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders 1`] = `
+<Fragment>
+  <CharacterOverview
+    handleCharacterSelect={[Function]}
+    image=""
+    name=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    See Another
+  </button>
+  <form>
+    <input
+      name="search"
+      onChange={[Function]}
+      type="search"
+      value=""
+    />
+    <input
+      onClick={[Function]}
+      type="submit"
+    />
+  </form>
+</Fragment>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders 1`] = `
+<div>
+  <h1>
+    Avatar Browser
+  </h1>
+  <nav>
+    <ul>
+      <li>
+        <Link
+          to="/"
+        >
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/list"
+        >
+          All Avatars
+        </Link>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
