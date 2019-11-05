@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getCharacters } from '../services/getCharacters';
 import PropTypes from 'prop-types';
-import { CharacterListDisplay } from './CharacterListDisplay';
+import { CharacterOverview } from './CharacterOverview';
 
 export default class List extends Component  {
 
@@ -45,7 +45,7 @@ export default class List extends Component  {
 
   render() {
     const items = this.state.items.map(item => (
-      <CharacterListDisplay
+      <CharacterOverview
         key={item._id || item.name}
         name={item.name}
         image={item.photoUrl}

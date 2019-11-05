@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character Overview component renders character overview 1`] = `
+<div
+  onClick={[Function]}
+>
+  <h2>
+    Fire Nation councilwoman
+  </h2>
+  <img
+    alt="image of Fire Nation councilwoman"
+    src="https://vignette.wikia.nocookie.net/avatar/images/f/f9/Fire_Nation_councilwoman.png/revision/latest?cb=20121110144847"
+  />
+</div>
+`;
