@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getCharacters } from '../services/getCharacters';
 import PropTypes from 'prop-types';
+import { CharacterOverview } from './CharacterOverview';
 
 export default class Home extends Component  {
 
@@ -32,7 +33,11 @@ export default class Home extends Component  {
     const { randomImgUrl, randomImgName, search } = this.state;
     return (
       <>
-        <img src={randomImgUrl} alt={'image of ' + randomImgName} />
+        <CharacterOverview
+          name={randomImgName}
+          image={randomImgUrl}
+          handleCharacterSelect={() => true} 
+        />
         <button onClick={this.apiGetRandomCharacter}>See Another</button>
         <form>
           <input type="search" name="search" value={search} onChange={this.handleSearchChange} />
