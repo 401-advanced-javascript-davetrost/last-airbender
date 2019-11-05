@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component renders 1`] = `
+<h2>
+  404: that resource cannot be located
+</h2>
+`;
