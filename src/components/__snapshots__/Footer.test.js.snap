@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders 1`] = `
+<p>
+  🔥 🔥 ⒸFire Nation 🔥 🔥
+</p>
+`;
